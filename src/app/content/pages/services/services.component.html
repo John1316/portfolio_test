@@ -1,83 +1,58 @@
 <!--Banner Start-->
-<section class="page-title parallax1">
+<section class="page-title services_page--title" *ngFor="let banner of bannerImage" style="background-image: url('https://digitalbondmena.com/banner_images/{{banner.services_banner_image}}');">
   <div class="container">
     <div class="standalone-content-data">
-      <h2 class="hide-cursor">Case study</h2>
+      <h2 class="hide-cursor text-white">Services</h2>
       <ul class="page-breadcrumb link">
         <li>
-          <a routerLink="/home"><span class="icon fas fa-home"></span>Home</a>
+          <a routerLink="/home" class="text-white"><span class="icon text-white fas fa-home"></span>Home</a>
         </li>
-        <li><a>Case study</a></li>
+        <li><a class="text-white">Services</a></li>
       </ul>
     </div>
   </div>
+  <svg
+    id="banner_svg"
+    class="separator__svg"
+    width="100%"
+    viewBox="0 0 100 100"
+    preserveAspectRatio="none"
+    fill="#ffffff"
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M 100 100 V 60 L 0 100" />
+    <path d="M 30 73 L 100 50 V 50 Z" fill="#ffffff" stroke-width="0" />
+  </svg>
 </section>
 <!--Banner End-->
-
-    <section class="services-section">
-      <div class="container">
-        <div class="row">
-          <!--Column item-->
-          <div class="col-12 text-center">
-            <h1 class="section-header">Services</h1>
+<div *ngIf="loading">
+  <app-loader></app-loader>
+</div>
+<section class="services-section">
+  <div class="container">
+    <div class="row">
+      <!--Column item-->
+      <div class="col-12 text-center">
+        <h1 class="section-header">Services</h1>
+      </div>
+      <div *ngFor="let service of services" class="col-md-4 wow animated fadeInUp">
+        <div class="card">
+          <div class="card-content">
+            <h2>{{service.en_title}}</h2>
+            <p>
+              {{
+                service.en_text | slice:0:130
+              }}
+            </p>
+            <a [routerLink]="['/services', service.id]" class="btn">Discover more</a>
           </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-content">
-                <h2>Lorem Ipsum</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna
-                </p>
-                <a routerLink="1" class="btn">Show More</a>
-              </div>
-              <div class="card-img right">
-                <img
-                  class=""
-                  src="https://images.unsplash.com/photo-1601823984263-b87b59798b70?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-content">
-                <h2>Lorem Ipsum</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna
-                </p>
-                <a routerLink="1" class="btn">Show More</a>
-              </div>
-              <div class="card-img right">
-                <img
-                  class=""
-                  src="https://images.unsplash.com/photo-1601823984263-b87b59798b70?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-content">
-                <h2>Lorem Ipsum</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna
-                </p>
-                <a routerLink="1" class="btn">Show More</a>
-              </div>
-              <div class="card-img right">
-                <img
-                  class=""
-                  src="https://images.unsplash.com/photo-1601823984263-b87b59798b70?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-                  alt=""
-                />
-              </div>
-            </div>
+          <div class="card-img right">
+            <img class="" [src]="serviceImage+service.image" alt="" />
           </div>
         </div>
       </div>
-    </section>
+     
+    </div>
+  </div>
+</section>

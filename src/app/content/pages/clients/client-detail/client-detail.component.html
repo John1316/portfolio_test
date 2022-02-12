@@ -1,0 +1,88 @@
+<!--Banner Start-->
+<section class="page-title casestudy_page--title ">
+  <div class="container">
+    <div class="standalone-content-data">
+      <h2 class="hide-cursor">Case studies</h2>
+      <ul class="page-breadcrumb link">
+        <li>
+          <a routerLink="/home"><span class="icon fas fa-home"></span>Home</a>
+        </li>
+        <li><a>Case studies</a></li>
+      </ul>
+    </div>
+  </div>
+  <svg
+  id="banner_svg"
+  class="separator__svg"
+  width="100%"
+  viewBox="0 0 100 100"
+  preserveAspectRatio="none"
+  fill="#ffffff"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path d="M 100 100 V 60 L 0 100" />
+  <path d="M 30 73 L 100 50 V 50 Z" fill="#ffffff" stroke-width="0" />
+</svg>
+</section>
+<!--Banner End-->
+<!-- <div *ngIf="loading">
+  <app-loader></app-loader>
+</div>
+
+
+<section class="case_studies">
+  <div class="container">
+    <owl-carousel-o [options]="caseStudiesSlider" class="client-team">
+
+      <ng-template *ngFor="let caseStudy of caseStudies" carouselSlide class="wow fadeInUp">
+        <div routerLink="/clients/{{caseStudy.id}}"class="card case_study_card">
+          <img [src]="caseStudyImage+caseStudy.logo" alt="" />
+          <div class="card-body">
+            <a href="">{{caseStudy.en_title}}</a>
+            <p class="case_study_card_description">
+              {{caseStudy.en_text}}
+            </p>
+          </div>
+        </div>
+      </ng-template>
+
+      </owl-carousel-o>
+  </div>
+</section > -->
+<section class="aboutClient">
+  <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, accusantium?</h3>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit laborum cum deleniti maxime sapiente consequuntur omnis quas, nihil sunt. Reiciendis aliquam ipsam suscipit modi laudantium! Animi exercitationem possimus doloribus corporis.
+  Dolorem iusto ex nam veritatis, ratione assumenda alias debitis, voluptatibus nihil doloremque deserunt a quas adipisci perspiciatis tempora similique quam ut, corporis ipsum magnam. Atque aperiam sint voluptatum commodi nesciunt.
+  Praesentium fugit rerum architecto natus odio quidem eligendi mollitia porro optio sint laudantium fuga exercitationem ducimus enim odit ea dicta, cum labore suscipit corporis? Deleniti illum distinctio aliquid impedit consequuntur.
+  Minima perferendis corrupti quam asperiores suscipit iste adipisci debitis ratione quidem tenetur maxime accusamus esse blanditiis repellendus possimus animi ut soluta nihil minus commodi laboriosam ipsam amet, inventore illo? Quae.
+  Eum inventore corrupti tenetur debitis aperiam delectus. Similique, voluptates quasi ratione quia, id in officiis quae ipsum temporibus numquam quo doloremque itaque animi quam voluptatem dolores soluta. Iste, eius excepturi.</p>
+</section>
+<section class="case_studies">
+  <div class="container">
+    <owl-carousel-o [options]="caseStudiesSlider" class="client-team">
+
+      <ng-template *ngFor="let caseStudy of caseStudies" carouselSlide class="wow fadeInUp">
+        <a [attr.data-toggle]="'modal'" [attr.data-target]="['#social_media']" class="card case_study_card">
+          <img [src]="caseStudyImage+caseStudy.logo" alt="" />
+        </a>
+      </ng-template>
+
+      </owl-carousel-o>
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="social_media" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-dialog-centered">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+
+      <div class="modal-body">
+        <img src="assets/images/Portfolio/Business/NBD.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</div>

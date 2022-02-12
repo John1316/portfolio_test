@@ -6,7 +6,7 @@
             <div class="col-6 d-flex align-items-center">
                 <div class="contact-info">
                     <span><i class="lni lni-whatsapp"></i>
-                      <a href="https://api.whatsapp.com/send?phone=2001021551322" class="ml-2">01021551322</a>
+                      <a target="_blank" href="https://api.whatsapp.com/send?phone=2001021551322" class="ml-2">01021551322</a>
                     </span>
                 </div>
             </div>
@@ -17,7 +17,7 @@
                         <li><a target="_blank" href="https://www.instagram.com/digitalbondmena/" class="instagrams-text-hvr"><i class="lni lni-instagram-filled"></i></a></li>
                         <li><a target="_blank" href="https://www.linkedin.com/company/digital-bond/" class="linkedin-text-hvr"><i class="fab fa-linkedin-in"></i></a></li>
                         <li>
-                          <a  class="sidemenu_btn " id="sidemenu_toggle">
+                          <a href="javascript:void(0)" class="sidemenu_btn " id="sidemenu_toggle">
                             <i class="lni lni-menu"></i>
                           </a>
                       </li>
@@ -30,7 +30,7 @@
     </div>
   </div>
   <!--Side Nav-->
-  <div appOpen class="side-menu hidden side-menu-opacity">
+  <div class="side-menu hidden side-menu-opacity">
       <div class="inner-wrapper">
           <span class="btn-close" id="btn_sideNavClose"><i></i><i></i></span>
           <a class="navbar-brand"><img src="assets/digital-agency/img/logo.png" data-depth="0.1" alt="logo"></a>
@@ -45,13 +45,22 @@
                   <li class="nav-item">
                       <a class="nav-link scroll" routerLink="/clients">Case studies</a>
                   </li>
-                  <li class="nav-item">
+                  <!-- <li class="nav-item ">
                       <a class="nav-link scroll" routerLink="/say-hello">Say hello</a>
-                  </li>
+                  </li> -->
 
 
                   <li class="nav-item">
                       <a class="nav-link scroll" routerLink="services">Services</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="dropbtn nav-link dropdown-toggle" routerLink="/say-hello" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Say hello
+                    </a>
+                    <ul class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" routerLink="/review">Review</a>
+                      <a class="dropdown-item" routerLink="/contact">Contact us</a>
+                    </ul>
                   </li>
 
               </ul>

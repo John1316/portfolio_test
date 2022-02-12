@@ -22,7 +22,14 @@ import { ServicesComponent } from './content/pages/services/services.component';
 import { ServicesDetailsComponent } from './content/pages/services/services-details/services-details.component';
 import { PortfolioComponent } from './content/pages/portfolio/portfolio.component';
 import { SayhelloComponent } from './content/pages/sayhello/sayhello.component';
-import { OpenDirective } from './diretives/open.directive';
+import { FacebookModule } from "ngx-facebook";
+import { HttpClientModule } from "@angular/common/http";
+import { ThankyouContactComponent } from './content/thankyou/thankyou-contact/thankyou-contact.component';
+import { ThankyouReviewComponent } from './content/thankyou/thankyou-review/thankyou-review.component';
+import { ActionSpinnerComponent } from './content/shared/action-spinner/action-spinner.component';
+import { ClientDetailComponent } from './content/pages/clients/client-detail/client-detail.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,8 +48,10 @@ import { OpenDirective } from './diretives/open.directive';
     ServicesDetailsComponent,
     PortfolioComponent,
     SayhelloComponent,
-    OpenDirective,
-
+    ThankyouContactComponent,
+    ThankyouReviewComponent,
+    ActionSpinnerComponent,
+    ClientDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,7 +60,9 @@ import { OpenDirective } from './diretives/open.directive';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    FacebookModule.forRoot(),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

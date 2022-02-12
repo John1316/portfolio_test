@@ -496,23 +496,23 @@ $(".btn_up").on('click', function(e) {
   /*=============================================
      Scroll Top Button
 ===========================================*/
-  // $(".scroll").on("click", function (event) {
-  //   event.preventDefault();
-  //   $("html,body").animate(
-  //     {
-  //       scrollTop: $(this.hash).offset().top - 20,
-  //     },
-  //     1200
-  //   );
-  // });
+  $(".scroll").on("click", function (event) {
+    event.preventDefault();
+    $("html,body").animate(
+      {
+        scrollTop: $(this.hash).offset().top - 20,
+      },
+      1200
+    );
+  });
 
-  // $(".scroll1").on("click", function (event) {
-  //   event.preventDefault();
-  //   $("html,body").animate(
-  //     {
-  //       scrollTop: $(this.hash).offset().top - 180,
-  //     },
-  //     1200
-  //   );
-  // });
+  $(".scroll1").on("click", function (event) {
+    event.preventDefault();
+    $("html,body").animate(
+      {
+        scrollTop: $(this.hash).offset().top - 180,
+      },
+      1200
+    );
+  });
 });
